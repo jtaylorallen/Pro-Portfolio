@@ -1,81 +1,84 @@
 :root {
     --primary-color: white;
     --secondary-color: #024e76;
-    --tertiary-color: #367e78;
+    --tertiary-color: #367E7B;
     --h1tag-size: 2.5rem; /* header, and article topics throughout the page */
     --right-margin: 5vw; /* page margin to make more uniform */
     --left-margin: 7vw; /* body content margin to make more uniform */
     --border-line-width: 0.2rem; /* small accent border lines across page */
+  }
+  
+  * {
+      margin: ;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+  
+  body {
+      color: var(--tertiary-color);
+      font-family: Helvetica, Arial, sans-serif;
+    }
+  
+    /* apply styles to <header> */
+  header {
+      padding: 20px 35px;
+      background-color: var(--tertiary-color);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      background-image: url();
+      background-size: cover;
+      background-position: 80%;
+      background-attachment: fixed;
+      z-index: 9999;
+    }
+    
+    header h1 {
+      font-weight: bold;
+      font-size: 36px;
+      color: var(--primary-color);
+      margin: 0;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  
+    }
+  
+    header a {
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+  
+    header nav {
+      margin: 7px 0;
+    }
+  
+    header nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+    }
+  
+    header nav ul li a {
+      padding: 10px 15px;
+      font-weight: lighter;
+      font-size: 1.55vw;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+  
+    header h1 {
+      font-weight: bold;
+      font-size: 30px;
+      color: var(--primary-color);
+      margin: 0;
+      display: inline;
+    }
 
-    * {
-        margin: ;
-        padding: 0;
-        box-sizing: border-box;
-      }
-    
-    
-    body {
-        color: var(--tertiary-color);
-        font-family: Helvetica, Arial, sans-serif;
-      }
-    
-      /* apply styles to <header> */
-    header {
-        padding: 20px 35px;
-        background-color: var(--tertiary-color);
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        background-image: url();
-        background-size: cover;
-        background-position: 80%;
-        background-attachment: fixed;
-        z-index: 9999;
-      }
-      
-      header h1 {
-        font-weight: bold;
-        font-size: 36px;
-        color: var(--primary-color);
-        margin: 0;
-        text-shadow: 0 0 10px rgba(0,0,0,0.5);
-    
-      }
-    
-      header a {
-        text-decoration: none;
-        color: var(--primary-color);
-      }
-    
-      header nav {
-        margin: 7px 0;
-      }
-    
-      header nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none;
-      }
-    
-      header nav ul li a {
-        padding: 10px 15px;
-        font-weight: lighter;
-        font-size: 1.55vw;
-        text-shadow: 0 0 10px rgba(0,0,0,0.5);
-      }
-    
-      header h1 {
-        font-weight: bold;
-        font-size: 30px;
-        color: var(--primary-color);
-        margin: 0;
-        display: inline;
-      }
+
     /* Hero Style Start*/
     .hero {
         height:200px;
@@ -105,3 +108,217 @@
       font-size: 35px;
       color: var(--primary-color);
       text-shadow: 0 0 10px rgba(0,0,0,0.5);
+      padding: .25rem;
+      display: flex;
+      margin: 0px var(--right-margin) 0vh 0vw;
+      padding: .5rem;
+      position: absolute;
+      bottom: 2vh;
+      right: 0;
+    }
+
+    main > div {
+        display: block;
+        align-items: stretch;
+        margin: 0vh 0vw 0vh 0vw;
+        position: relative;
+        height: 150px;
+    }
+    
+    main > div img {
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+        height: 100%;
+    }
+    
+    main > div > h2 {
+        font-size: 1.5rem;
+        padding: .25rem;
+        color: var(--primary-color);
+        background: var(--secondary-color);
+        display: flex;
+        justify-content: right;
+        margin: 0px var(--right-margin) 0vh 0vw;
+        padding: .5rem;
+        position: absolute;
+        bottom: 2vh;
+        right: 0;
+        background: var(--secondary-color);
+    }
+    main section {
+        margin: 2vh var(--right-margin) 1vh var(--left-margin);
+        display: flex;
+    }
+    
+    main section h1 {
+        width: 30%;
+        font-size: var(--h1tag-size);
+        text-align: right;
+        padding-right: .75rem;
+        border-right: var(--border-line-width) solid var(--tertiary-color);
+        color: var(--tertiary-color);
+    }
+    
+    main section > ul,
+    main section > div {
+        padding-left: 1.25rem;
+        width: 100%;
+    }
+    
+    main section div {
+        color: var(--teriary-color);
+    }
+    
+    main section ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    main section ul li > * {
+        color: var(--tertiary-color);
+        border-color: var(--tertiary-color);
+        font-size: 1.3rem;
+        display: flex;
+    }
+    
+    footer {
+        margin: 5vh;
+        padding-bottom: 2vh;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .project-card {
+        display: flex;
+        overflow: hidden;
+        margin: 0rem 1% 1% 0rem;
+        width: 48%;
+        border: var(--border-line-width) solid var(--secondary-color);
+        filter: grayscale(50%);
+        transition: all 0.25s ease;
+    }
+    
+    .project-card:hover {
+        filter: grayscale(0%);
+        cursor: pointer;
+    }
+    
+    .project-card img {
+        flex-shrink: 0;
+        max-width: 100%;
+        width: 100%;
+        max-height: 100%;
+    }
+    
+    .project-card div h2 {
+        color: var(--primary-color);
+        font-size: 1.2rem;
+    }
+    
+    .project-card > div {
+        padding: .3rem;
+        position: absolute;
+        bottom: 2vh;
+        left: 0;
+        color: var(--primary-color);
+        background: var(--secondary-color);
+    }
+    
+    #card-holder {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #main-card {
+        margin-right: 0px;
+        width: 97%;
+    }
+    
+    @media screen and (max-width:1068px) {
+        body header h1 span {
+            display: none;
+        }
+    
+        body section {
+            display:block
+        }
+    
+        body section h1 {
+            border: none;
+            border-bottom: var(--border-line-width) solid var(--tertiary-color);
+            width: 100%;
+            text-align: left;
+            margin-bottom: 2vh;
+        }
+    
+        body section h1 span {
+            display:none
+        }
+    
+        body section ul {
+            display: block;
+        }
+    
+        body section ul li {
+            display: flex;
+            justify-content: center;
+        }
+    
+        body section ul li > * {
+            border: none;
+            width: 60%;
+            color: var(--secondary-color);
+            background: var(--tertiary-color);
+        }
+    
+        #main-card,
+        .project-card {
+            width: 100%;
+        }
+    
+        #card-holder {
+            width: 100%;
+            display: block;
+            flex-wrap: nowrap;
+        }
+    }
+    
+    @media screen and (max-width:500) {
+        header {
+            display: block;
+            height: 100%;
+        }
+    
+        body header h1 span {
+            display: inline;
+        }
+    
+        header ul {
+            width: 80%;
+            display: block;
+            justify-content: center;
+            padding-top: .4rem;
+            padding-bottom: .7rem;
+        }
+    
+        header ul li a {
+            display: inline-block;
+            width: 50%;
+            padding: .5rem 0rem .3rem 0rem;
+            margin: 0rem 0rem .4rem var(--left-margin);
+        }
+    }
+    
+    @media screen and (max-width:414) {
+        body section ul li > * {
+            width: 100%;
+        }
+    
+        header ul li a {
+            width: 100%;
+        }
+    }
+
+
